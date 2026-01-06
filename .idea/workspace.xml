@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bf088d0-6000-482f-91bd-f4376a795fe2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/combined.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/combined.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/logger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/cookies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/cookies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/format.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/format.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/jwt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/jwt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validations/auth.validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validations/auth.validation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +97,7 @@
       <workItem from="1767492874857" duration="19002000" />
       <workItem from="1767593399497" duration="435000" />
       <workItem from="1767594277759" duration="2328000" />
-      <workItem from="1767664581088" duration="1718000" />
+      <workItem from="1767664581088" duration="6833000" />
     </task>
     <servers />
   </component>
