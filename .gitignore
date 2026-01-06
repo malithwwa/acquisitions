@@ -1,3 +1,5 @@
 node_modules
 .idea
+.env.production
+.env.development
 .env.example.neon_local/
