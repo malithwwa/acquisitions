@@ -5,7 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bf088d0-6000-482f-91bd-f4376a795fe2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DOECKER_SETUP.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOCKER_SETUP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/.env.development" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/clover.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/app.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/app.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/config/arcjet.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/config/arcjet.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/config/database.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/config/database.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/config/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/config/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/config/logger.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/config/logger.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/controllers/auth.controller.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/controllers/auth.controller.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/controllers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/controllers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/controllers/users.controller.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/controllers/users.controller.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/middleware/auth.middleware.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/middleware/auth.middleware.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/middleware/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/middleware/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/middleware/security.middleware.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/middleware/security.middleware.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/models/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/models/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/models/user.model.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/models/user.model.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/routes/auth.routes.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/routes/auth.routes.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/routes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/routes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/routes/user.routes.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/routes/user.routes.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/services/auth.service.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/services/auth.service.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/services/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/services/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/services/user.service.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/services/user.service.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/utils/cookies.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/utils/cookies.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/utils/format.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/utils/format.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/utils/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/utils/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/utils/jwt.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/utils/jwt.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/validations/auth.validation.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/validations/auth.validation.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/validations/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/validations/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/validations/users.validation.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/validations/users.validation.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/combined.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/combined.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +129,7 @@
       <workItem from="1767594277759" duration="2328000" />
       <workItem from="1767664581088" duration="6833000" />
       <workItem from="1767684485057" duration="1022000" />
-      <workItem from="1767685928763" duration="13626000" />
+      <workItem from="1767685928763" duration="14307000" />
     </task>
     <servers />
   </component>
