@@ -143,3 +143,20 @@
 {"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:11:31:57 +0000] \"GET /api/users/1 HTTP/1.1\" 200 196 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
 {"level":"info","message":"Getting user 1 from database","service":"acquisitions-api"}
 {"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:11:33:43 +0000] \"GET /api/users/1 HTTP/1.1\" 200 196 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [06/Jan/2026:11:37:29 +0000] \"GET /api/users/1 HTTP/1.1\" 401 72 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"User logged in successfully malith@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [06/Jan/2026:11:37:49 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 122 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"User authenticated: malith@gmail.com (admin)","service":"acquisitions-api"}
+{"level":"info","message":"Getting user 1 from database","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [06/Jan/2026:11:40:07 +0000] \"GET /api/users/1 HTTP/1.1\" 200 196 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"User authenticated: malith@gmail.com (admin)","service":"acquisitions-api"}
+{"level":"info","message":"Deleting user 1 by user 4","service":"acquisitions-api"}
+{"level":"info","message":"User 1 deleted successfully","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [06/Jan/2026:11:40:33 +0000] \"DELETE /api/users/1 HTTP/1.1\" 200 39 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"User authenticated: malith@gmail.com (admin)","service":"acquisitions-api"}
+{"level":"info","message":"Getting users from database","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [06/Jan/2026:11:40:47 +0000] \"GET /api/users HTTP/1.1\" 200 528 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.20.0.1 - - [07/Jan/2026:02:23:32 +0000] \"GET /health HTTP/1.1\" 200 79 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [07/Jan/2026:04:33:25 +0000] \"GET /health HTTP/1.1\" 200 74 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [07/Jan/2026:04:33:25 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [07/Jan/2026:04:33:25 +0000] \"GET /nonexsistent HTTP/1.1\" 404 28 \"-\" \"-\"","service":"acquisitions-api"}
