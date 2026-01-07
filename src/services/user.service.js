@@ -52,7 +52,8 @@ export const updateUser = async (id, updates) => {
     const updatePayload = {};
 
     if (typeof updates.name !== 'undefined') updatePayload.name = updates.name;
-    if (typeof updates.email !== 'undefined') updatePayload.email = updates.email;
+    if (typeof updates.email !== 'undefined')
+      updatePayload.email = updates.email;
     if (typeof updates.role !== 'undefined') updatePayload.role = updates.role;
 
     if (typeof updates.password !== 'undefined') {

@@ -78,7 +78,7 @@ jobs:
           echo "## ✅ Tests Passed" >> $GITHUB_STEP_SUMMARY
           echo "All tests have passed successfully!" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          
+
           # Try to extract coverage information if available
           if [ -f "coverage/coverage-summary.json" ]; then
             echo "### Coverage Report" >> $GITHUB_STEP_SUMMARY
@@ -108,7 +108,7 @@ jobs:
         run: |
           echo "::notice title=Test Results::Tests failed. Coverage reports (if generated) have been uploaded as artifacts."
           echo "::notice title=Artifacts::Check the 'coverage-reports' artifact for detailed coverage information."
-          
+
           # Add failure details to summary
           echo "## ❌ Test Failure Details" >> $GITHUB_STEP_SUMMARY
           echo "Tests have failed. Please review the output above for specific failure details." >> $GITHUB_STEP_SUMMARY

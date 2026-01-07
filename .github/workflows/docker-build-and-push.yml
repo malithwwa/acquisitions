@@ -29,7 +29,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/acquisitions
+          images: ${{ secrets.DOCKER_USERNAME }}/acquisitions-app
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -61,7 +61,7 @@ jobs:
           echo "**Repository:** \`${{ secrets.DOCKER_USERNAME }}/acquisitions\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Tags Created" >> $GITHUB_STEP_SUMMARY
-          
+
           # Parse and display tags in a more readable format
           TAGS="${{ steps.meta.outputs.tags }}"
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
@@ -72,7 +72,7 @@ jobs:
           done
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          
+
           echo "### Build Details" >> $GITHUB_STEP_SUMMARY
           echo "- **Platforms:** \`linux/amd64\`, \`linux/arm64\`" >> $GITHUB_STEP_SUMMARY
           echo "- **Build Target:** \`production\`" >> $GITHUB_STEP_SUMMARY
@@ -80,7 +80,7 @@ jobs:
           echo "- **Trigger:** ${{ github.event_name }} on \`${{ github.ref_name }}\` branch" >> $GITHUB_STEP_SUMMARY
           echo "- **Commit:** [\`${{ github.sha }}\`](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          
+
           echo "### Usage" >> $GITHUB_STEP_SUMMARY
           echo "Pull the latest image:" >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY

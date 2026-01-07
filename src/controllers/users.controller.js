@@ -5,7 +5,10 @@ import {
   updateUser as updateUserService,
   deleteUser as deleteUserService,
 } from '#services/user.service.js';
-import { updateUserSchema, userIdSchema } from '#validations/users.validation.js';
+import {
+  updateUserSchema,
+  userIdSchema,
+} from '#validations/users.validation.js';
 import { formatValidationError } from '#utils/format.js';
 
 export const fetchAllUsers = async (req, res, next) => {
@@ -92,7 +95,10 @@ export const updateUserById = async (req, res, next) => {
         .json({ error: 'Forbidden: you can only update your own profile' });
     }
 
-    if (typeof updates.role !== 'undefined' && authenticatedUserRole !== 'admin') {
+    if (
+      typeof updates.role !== 'undefined' &&
+      authenticatedUserRole !== 'admin'
+    ) {
       return res
         .status(403)
         .json({ error: 'Forbidden: only admin can change user role' });
