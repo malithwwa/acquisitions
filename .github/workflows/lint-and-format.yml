@@ -1,0 +1,66 @@
+name: Lint and Format
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main, staging]
+
+jobs:
+  lint-and-format:
+    name: Lint and Format Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: |
+          echo "Running ESLint..."
+          if ! npm run lint; then
+            echo "::error title=ESLint Failed::ESLint found issues. Fix them with 'npm run lint:fix' or manually address the problems."
+            exit 1
+          fi
+          echo "✅ ESLint passed!"
+
+      - name: Run Prettier check
+        run: |
+          echo "Running Prettier check..."
+          if ! npm run format:check; then
+            echo "::error title=Prettier Failed::Code formatting issues found. Fix them with 'npm run format' to automatically format your code."
+            exit 1
+          fi
+          echo "✅ Prettier check passed!"
+
+      - name: Summary
+        if: success()
+        run: |
+          echo "## ✅ Lint and Format Check Passed" >> $GITHUB_STEP_SUMMARY
+          echo "All code quality checks have passed successfully!" >> $GITHUB_STEP_SUMMARY
+          echo "- ESLint: ✅ No linting issues found" >> $GITHUB_STEP_SUMMARY
+          echo "- Prettier: ✅ Code formatting is consistent" >> $GITHUB_STEP_SUMMARY
+
+      - name: Failure Summary
+        if: failure()
+        run: |
+          echo "## ❌ Lint and Format Check Failed" >> $GITHUB_STEP_SUMMARY
+          echo "Code quality issues were found. Please fix them before merging:" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Quick Fix Commands:" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
+          echo "# Fix ESLint issues automatically" >> $GITHUB_STEP_SUMMARY
+          echo "npm run lint:fix" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "# Format code with Prettier" >> $GITHUB_STEP_SUMMARY
+          echo "npm run format" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY

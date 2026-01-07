@@ -1,0 +1,120 @@
+name: Tests
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main, staging]
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    env:
+      NODE_ENV: test
+      NODE_OPTIONS: --experimental-vm-modules
+      DATABASE_URL: postgres://test_user:test_password@localhost:5432/test_db
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: test_user
+          POSTGRES_PASSWORD: test_password
+          POSTGRES_DB: test_db
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run database migrations (if needed)
+        run: |
+          # Only run if migration script exists and database is needed for tests
+          if [ -f "drizzle.config.js" ] && npm run db:migrate --if-present; then
+            echo "Database migrations completed"
+          else
+            echo "No database migrations needed or script not found"
+          fi
+
+      - name: Run tests
+        run: |
+          echo "Running tests with coverage..."
+          if ! npm test -- --coverage --coverageReporters=text-lcov --coverageReporters=json --coverageDirectory=coverage; then
+            echo "::error title=Tests Failed::Some tests failed. Check the test output above for details."
+            echo "## ❌ Tests Failed" >> $GITHUB_STEP_SUMMARY
+            echo "Some tests failed. Please review the test output and fix the failing tests." >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+          echo "✅ All tests passed!"
+
+      - name: Upload coverage reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-reports
+          path: coverage/
+          retention-days: 30
+
+      - name: Generate test summary
+        if: success()
+        run: |
+          echo "## ✅ Tests Passed" >> $GITHUB_STEP_SUMMARY
+          echo "All tests have passed successfully!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Try to extract coverage information if available
+          if [ -f "coverage/coverage-summary.json" ]; then
+            echo "### Coverage Report" >> $GITHUB_STEP_SUMMARY
+            
+            # Extract coverage percentages using node (more reliable than jq in CI)
+            node -e "
+              try {
+                const fs = require('fs');
+                const coverage = JSON.parse(fs.readFileSync('coverage/coverage-summary.json', 'utf8'));
+                const total = coverage.total;
+                console.log('| Metric | Coverage |');
+                console.log('|--------|----------|');
+                console.log('| Lines | ' + total.lines.pct + '% |');
+                console.log('| Functions | ' + total.functions.pct + '% |');
+                console.log('| Branches | ' + total.branches.pct + '% |');
+                console.log('| Statements | ' + total.statements.pct + '% |');
+              } catch (error) {
+                console.log('Coverage summary not available');
+              }
+            " >> $GITHUB_STEP_SUMMARY
+          else
+            echo "Coverage reports have been uploaded as artifacts and will be retained for 30 days." >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Test failure annotations
+        if: failure()
+        run: |
+          echo "::notice title=Test Results::Tests failed. Coverage reports (if generated) have been uploaded as artifacts."
+          echo "::notice title=Artifacts::Check the 'coverage-reports' artifact for detailed coverage information."
+          
+          # Add failure details to summary
+          echo "## ❌ Test Failure Details" >> $GITHUB_STEP_SUMMARY
+          echo "Tests have failed. Please review the output above for specific failure details." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Next Steps:" >> $GITHUB_STEP_SUMMARY
+          echo "1. Check the test output above for specific failing tests" >> $GITHUB_STEP_SUMMARY
+          echo "2. Run tests locally: \`npm test\`" >> $GITHUB_STEP_SUMMARY
+          echo "3. Fix the failing tests and push your changes" >> $GITHUB_STEP_SUMMARY
+          echo "4. Coverage reports (if available) have been uploaded as artifacts" >> $GITHUB_STEP_SUMMARY
