@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
   res.status(200).send('Hello from Acquisitions API!');
 });
 
-app.get('/health', (req, res) => {
+app.get('/health/', (req, res) => {
   res.status(200).json({
     status: 'OK',
     timestamp: new Date().toISOString(),

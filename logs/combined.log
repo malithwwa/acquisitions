@@ -97,3 +97,49 @@
 {"level":"info","message":"User malith@gmail.com created successfully","service":"acquisitions-api"}
 {"level":"info","message":"User registered successfully malith@gmail.com","service":"acquisitions-api"}
 {"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:08:16:21 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 123 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:42:57 +0000] \"POST /api/users HTTP/1.1\" 404 149 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:43:04 +0000] \"GET /api/users HTTP/1.1\" 404 148 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:44:11 +0000] \"GET /api/users HTTP/1.1\" 404 148 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:47:25 +0000] \"GET /api/users HTTP/1.1\" 404 148 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:47:48 +0000] \"GET /health HTTP/1.1\" 200 78 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:48:16 +0000] \"GET /api/users HTTP/1.1\" 404 148 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:49:51 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:49:59 +0000] \"GET /api/users HTTP/1.1\" 404 148 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:51:08 +0000] \"GET /api/users HTTP/1.1\" 404 148 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:51:50 +0000] \"GET /api/users HTTP/1.1\" 404 148 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:51:54 +0000] \"GET /api/user HTTP/1.1\" 404 147 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:52:17 +0000] \"GET /api/user HTTP/1.1\" 404 147 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:52:38 +0000] \"GET /api/users HTTP/1.1\" 404 148 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:56:19 +0000] \"GET /api/user HTTP/1.1\" 404 147 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:56:37 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:56:47 +0000] \"GET /api/test HTTP/1.1\" 404 147 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:57:11 +0000] \"GET /test HTTP/1.1\" 404 143 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"error","message":"Error creating new user Error: User already exists","service":"acquisitions-api"}
+{"level":"error","message":"Signup error User already exists","service":"acquisitions-api","stack":"Error: User already exists\n    at createUser (file:///app/src/services/auth.service.js:58:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async signUp (file:///app/src/controllers/auth.controller.js:20:18)"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:57:39 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 409 32 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:58:09 +0000] \"GET /auth HTTP/1.1\" 404 143 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:58:32 +0000] \"POST /api/ HTTP/1.1\" 404 144 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:58:40 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:58:48 +0000] \"GET /api/users HTTP/1.1\" 404 148 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:10:59:30 +0000] \"GET /api/t HTTP/1.1\" 404 144 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:11:12:27 +0000] \"GET /health HTTP/1.1\" 200 79 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:11:12:33 +0000] \"GET /health HTTP/1.1\" 200 78 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:11:13:10 +0000] \"GET /health HTTP/1.1\" 200 79 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:11:13:18 +0000] \"GET /health HTTP/1.1\" 200 79 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [06/Jan/2026:11:14:51 +0000] \"GET /health/t HTTP/1.1\" 404 147 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [06/Jan/2026:11:14:59 +0000] \"GET /health/h HTTP/1.1\" 200 74 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [06/Jan/2026:11:15:15 +0000] \"GET /api/users HTTP/1.1\" 200 17 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users from database","service":"acquisitions-api"}
+{"cause":{"name":"NeonDbError","sourceError":{}},"level":"error","message":"Error fetching all users Failed query: select \"id\", \"email\", \"name\", \"role\", \"created_at\", \"updated_at\" from \"users\"\nparams: ","params":[],"query":"select \"id\", \"email\", \"name\", \"role\", \"created_at\", \"updated_at\" from \"users\"","service":"acquisitions-api","stack":"Error: Failed query: select \"id\", \"email\", \"name\", \"role\", \"created_at\", \"updated_at\" from \"users\"\nparams: \n    at NeonHttpPreparedQuery.queryWithCache (file:///D:/Personal%20Projects/acquisitions/node_modules/drizzle-orm/pg-core/session.js:41:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async NeonHttpPreparedQuery.execute (file:///D:/Personal%20Projects/acquisitions/node_modules/drizzle-orm/neon-http/session.js:45:20)\n    at async getAllUsers (file:///D:/Personal%20Projects/acquisitions/src/services/user.service.js:18:12)\n    at async fetchAllUsers (file:///D:/Personal%20Projects/acquisitions/src/controllers/users.controller.js:15:22)"}
+{"cause":{"name":"NeonDbError","sourceError":{}},"level":"error","message":"Error fetching all users Failed query: select \"id\", \"email\", \"name\", \"role\", \"created_at\", \"updated_at\" from \"users\"\nparams: ","params":[],"query":"select \"id\", \"email\", \"name\", \"role\", \"created_at\", \"updated_at\" from \"users\"","service":"acquisitions-api","stack":"Error: Failed query: select \"id\", \"email\", \"name\", \"role\", \"created_at\", \"updated_at\" from \"users\"\nparams: \n    at NeonHttpPreparedQuery.queryWithCache (file:///D:/Personal%20Projects/acquisitions/node_modules/drizzle-orm/pg-core/session.js:41:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async NeonHttpPreparedQuery.execute (file:///D:/Personal%20Projects/acquisitions/node_modules/drizzle-orm/neon-http/session.js:45:20)\n    at async getAllUsers (file:///D:/Personal%20Projects/acquisitions/src/services/user.service.js:18:12)\n    at async fetchAllUsers (file:///D:/Personal%20Projects/acquisitions/src/controllers/users.controller.js:15:22)"}
+{"level":"info","message":"::1 - - [06/Jan/2026:11:17:22 +0000] \"GET /api/users HTTP/1.1\" 500 957 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting users from database","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:11:27:10 +0000] \"GET /api/users HTTP/1.1\" 200 676 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting user 1 from database","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:11:27:33 +0000] \"GET /api/users/1 HTTP/1.1\" 200 196 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting user 1 from database","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:11:31:53 +0000] \"GET /api/users/1 HTTP/1.1\" 200 196 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting user 1 from database","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:11:31:57 +0000] \"GET /api/users/1 HTTP/1.1\" 200 196 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
+{"level":"info","message":"Getting user 1 from database","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.19.0.1 - - [06/Jan/2026:11:33:43 +0000] \"GET /api/users/1 HTTP/1.1\" 200 196 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisitions-api"}
